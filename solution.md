@@ -42,7 +42,6 @@ console.log(square(5));
 ## Sum Arrays
 
 ```js
-// Sum Numbers
 function sum(numbers) {
   let sum = 0;
   if (numbers.length === 0){
