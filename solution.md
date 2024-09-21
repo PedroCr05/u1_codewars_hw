@@ -42,20 +42,38 @@ console.log(square(5));
 ## Sum Arrays
 
 ```js
-function sum(numbers) {
-  let sum = 0;
-  if (numbers.length === 0){
-    return 0;
-    for (let i = 0; i < numbers.length; i++){
-    sum += numbers[i];
+// function sum(numbers) {
+//   let sum = 0;
+//   if (numbers.length === 0){
+//     return 0;
+//     for (let i = 0; i < numbers.length; i++){
+//     sum += numbers[i];
+//     }
+//   }
+//   return sum;
+// }
+// const numbers = [1, 5.2, 4, 0, -1];
+// console.log(sum(numbers));
+
+// Previous incorrect code
+
+// Updated code
+function positiveSum(numbers) {
+    let positiveSum = 0;
+    if (numbers.length === 0) {
+      return 0;
     }
-  }
-  return sum;
+    for (let i = 0; i < numbers.length; i++){
+      if (numbers[i] > 0){
+        positiveSum += numbers[i];
+      }
+    }
+    return positiveSum;
 }
 
-const numbers = [1, 5.2, 4, 0, -1];
+const numbers = [1, -4, 7, 12, 23, 0, -432];
 
-console.log(sum(numbers));
+console.log(positiveSum(numbers));
 ```
 
 ## Reversed Strings
